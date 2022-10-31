@@ -97,21 +97,25 @@ public class OwnerServiceTest {
 	@Test
 	public void testCreateOwner() {
 
-		String OWNER_NAME = "Ponky";
-		int OWNER_ID = 1;
-		int TYPE_ID = 1;
+		String FIRST_NAME = "Aracely";
+		String LAST_NAME = "Huamani";
+		String ADDRESS = " Av Los Pinos 321";
+		String CITY = "Lima";
+		int TELEPHONE = 998954673;
 
-		Owner owner = new Owner(OWNER_NAME, 1, 1);
+		Owner owner = new Owner(FIRST_NAME,LAST_NAME,ADDRESS,CITY,998954673);
 		
 		Owner ownerCreated = ownerService.create(owner);
 		
-		logger.info("OWNER CREATED :" + ownerCreated);
+		logger.info("Owner CREATED :" + ownerCreated);
 
 		//          ACTUAL                 , EXPECTED 
 		assertThat(ownerCreated.getId()      , notNullValue());
-		assertThat(ownerCreated.getName()    , is(OWNER_NAME));
-		assertThat(ownerCreated.getOwnerId() , is(OWNER_ID));
-		assertThat(ownerCreated.getTypeId()  , is(TYPE_ID));
+		assertThat(ownerCreated.getFirst_name()    , is(FIRST_NAME));
+		assertThat(ownerCreated.getLast_name() , is(LAST_NAME));
+		assertThat(ownerCreated.getAddress()  , is(ADDRESS));
+		assertThat(ownerCreated.getCity()  , is(CITY));
+		assertThat(ownerCreated.getTelephone()  , is(TELEPHONE));
 
 	}
 
