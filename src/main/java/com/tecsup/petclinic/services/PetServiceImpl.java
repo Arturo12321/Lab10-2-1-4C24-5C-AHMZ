@@ -12,14 +12,8 @@ import com.tecsup.petclinic.entities.Pet;
 import com.tecsup.petclinic.exception.PetNotFoundException;
 import com.tecsup.petclinic.repositories.PetRepository;
 
-/**
- * 
- * @author jgomezm
- *
- */
 @Service
 public class PetServiceImpl implements PetService {
-
 	private static final Logger logger = LoggerFactory.getLogger(PetServiceImpl.class);
 
 	@Autowired

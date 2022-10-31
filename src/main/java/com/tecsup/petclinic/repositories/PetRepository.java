@@ -1,5 +1,4 @@
 package com.tecsup.petclinic.repositories;
-
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
